@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+body {
+    font-family:"Poppins", sans-serif;
+}
+:root{
+    --main-color:rgb(32,201,151);
+    --size : 20px;
+    --section-color:rgb(248,249,250);
+}
+html{
+    scroll-behavior: smooth;
+}
+.header{
+    background-image: url(../images/intro-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+.lay-out{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header h2::after{
+    content: '';
+    animation: typing 3s infinite backwards;
+}
+@keyframes typing {
+    0%{content: 'Ia';}
+    5%{content: 'Iam ';}
+    10%{content: 'Iam a';}
+    15%{content: 'Iam a D';}
+    20%{content: 'Iam a Des';}
+    25%{content: 'Iam a Desig';}
+    30%{content: 'Iam a Designe';}
+    35%{content: "Iam a Designer";}
+    40%{content: 'Iam a Design';}
+    45%{content: "Iam a Desi";}
+    50%{content: "Iam a De";}
+    55%{content: "Iam a ";}
+    60%{content: "Iam ";}
+    65%{content: "Iam a ";}
+    70%{content: "Iam a ph";}
+    75%{content: "Iam a phot";}
+    80%{content: "Iam a photo";}
+    85%{content: "Iam a photog";}
+    90%{content: "Iam a photogra";}
+    95%{content: "Iam a photograph";}
+    100%{content: "Iam a photographer";}
+}
+.header p {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+.header h2 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 900;
+    margin: 10px 0px;
+}
+.text{
+    text-align: center;
+    margin: auto 0px;
+}
+.header button {
+    padding: 15px 35px;
+    border-radius: 50px;
+    margin: 15px 0px;
+    border: 2px solid var(--main-color);
+    background-color: transparent;
+    color: var(--main-color);
+    transition: color 1s , backgroundColor 1s;
+    font-size: 20px;
+}
+.header button:hover {
+    color: #fff;
+    background-color: var(--main-color);
+}
+.item{
+   position: relative;
+   animation: move 1s infinite alternate;
+}
+.item i{
+    color: #fff;
+
+}
+@keyframes move {
+    0%{bottom: 30px;}
+    100%{bottom: 0px;}
+}
+/* nav-bar */
+.nav-bar{
+    background-color: hsl(0, 0%, 0%);
+    padding: 15px 0px;
+    position: fixed;
+    width: 100%;
+    top:0;
+    
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.links ul{
+    display: flex;
+    gap: 25px;
+}
+.links ul a{
+    font-size: 20px;
+    color: #fff;
+}
+.about {
+    margin: 50px 0px;
+}
+.title {
+    text-align: center;
+    position: relative;
+}
+.title h2{
+    font-size: 120px;
+    color: #aaa;
+    opacity: 0.3;
+    font-weight: 900;
+  
+}
+.title h3{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 35% ;
+    font-size: 25px;
+}
+.title h3::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100px;
+    height: 1px;
+    background-color: var(--main-color);
+}
+.about-content p {
+    line-height: 2rem;
+    margin: 15px 0px;
+    font-size: 20px;
+   
+}
+.about-content {
+    width: calc(70% - 50px);
+ 
+}
+.about-content span {
+    color: var(--main-color);
+}
+.about-data{
+    width: 30%;
+    margin: 20px 0px;
+}
+.d-flex-one {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.about-data .bolder {
+    font-size: 20px;
+    font-weight: bolder;
+}
+.about-data li{
+    margin: 15px 0px;
+}
+.about-data li  {
+    border-bottom: 2px dotted #000 ;
+}
+.about-data span {
+    margin: 10px 0px;
+}
+.btn button {
+    padding: 15px 28px;
+    border-radius: 50px;
+    border: 2px solid var(--main-color);
+    background-color: var(--main-color);
+    color: #fff;
+    transition: all 1s;
+    font-size: 20px;
+    margin: 15px 0px;
+}
+.btn button:hover {
+    background-color: rgba(32,201,151,0.6);
+}
+.counter {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 70px;
+}
+.items p {
+    color: #aaa;
+}
+.items{
+    padding: 30px 10px;
+}
+.items:not(:last-child) {
+    border-right: 2px dashed rgba(0, 0, 0,0.4);
+   
+}
+.services{
+    background-color: var(--section-color);
+}
+.d-flex-two{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item-one {
+    margin: 30px 0px;
+    width: calc(50% - 50px);
+}
+
+.text-one h3{
+    font-size: 30px;
+} 
+.text-one p {
+    line-height: 25px;
+    font-size: 24px;
+    color: #aaa;
+    padding: 10px 15px;
+
+}
+.item-one {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.item-one span {
+    padding: 15px 25px;
+    background-color: #fff;
+}
+.item-one i{
+    color: var(--main-color);
+    font-size: 15px;
+}
